@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Virtual Home Builder</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> 
+  <link rel="stylesheet" href="assests/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"> -->
+  <!-- logo -->
+    <link rel="icon" href="images/logo.png">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/structure.css">
+
+</head>
+<body>
+
+<!-- TOP NAV BAR -->
+<header class="top-bar d-flex align-items-center justify-content-between px-4">
+  <div class="d-flex align-items-center gap-3">
+    <a href="select-size.html" class="back-btn">
+      <i class="bi bi-arrow-left"></i>
+    </a>
+    <h5 class="mb-0 fw-semibold">Structure Builder</h5>
+  </div>
+  <button onclick="addRoom()" class="btn btn-outline-primary btn-sm">+ Add Room</button>
+
+  <button class="btn btn-primary px-4">
+    Next: Interior Design →
+  </button>
+</header>
+
+<!-- MAIN CONTENT -->
+<div class="container-fluid main-area">
+  <div class="row h-100">
+
+    <!-- LEFT: 2D BUILDER -->
+    <div class="col-lg-7 editor-2d">
+      <div class="editor-header">
+        <h6>2D Layout Builder</h6>
+        <p>Draw rooms and adjust structure</p>
+      </div>
+
+      <div class="canvas-wrapper">
+        <!-- Fabric.js canvas will go here -->
+        <canvas id="floorCanvas"></canvas>
+      </div>
+    </div>
+
+    <!-- RIGHT: 3D PREVIEW -->
+    <div class="col-lg-5 preview-3d">
+      <div class="editor-header">
+        <h6>Live 3D Preview</h6>
+        <p>Auto updates from structure</p>
+      </div>
+
+      <div class="preview-box">
+        <!-- Three.js scene will go here -->
+        <div class="preview-placeholder">
+          3D Preview Area
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Fabric.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script>
+
+    <!-- 2D Logic -->
+    <script src="js/structure-2d.js"></script>
+    <!-- js -->   
+    <script src="assests/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

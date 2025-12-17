@@ -1,0 +1,88 @@
+
+/*sample design*/
+.sampledesign a {
+    border: #0d6efd;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin: 5% 30%;
+    display: flex;
+    justify-content: center;
+    background-color: #0d6efd;
+    text-decoration: none;
+    width: 40%;
+}
+.container-py-5 {
+    background-color: rgb(234, 234, 250);
+    padding: 30px 40px;
+    margin: 0 0;
+}
+.house-card {
+    border-radius: 16px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.house-card:hover {
+    transform: translateY(-5px);
+}
+
+.house-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: 0.4s ease-in-out;
+}
+
+.house-card:hover img {
+    transform: scale(1.05);
+}
+
+.content {
+    padding: 15px;
+}
+
+/* Right Side Panel */
+.detailsPanel {
+    position: fixed;
+    top: 0;
+    right: -450px;
+    width: 450px;
+    height: 100vh;
+    background: white;
+    box-shadow: -5px 0 10px rgba(0,0,0,0.2);
+    transition: 0.4s;
+    padding: 20px;
+    overflow-y: auto;
+    z-index: 999;
+}
+
+.detailsPanel.open {
+    right: 0;
+}
+
+#closeBtn {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.panel-img {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+.price-box {
+    background: #f1f5ff;
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.housePrice {
+    color: #0d6efd;
+}

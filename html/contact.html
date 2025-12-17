@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Virtual Home Builder</title>
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="assests/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- css -->
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- logo -->
+    <link rel="icon" href="images/logo.png">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4 ">
+  <div class="container-fluid">
+
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="images/house-solid-full .svg" alt="" height="24" class="me-2">
+      <span style="color: rgb(25, 166, 222); font-weight:600;">Virtual Home Builder</span>
+    </a>
+
+    <!-- Toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+     
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav mx-auto gap-4">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="features.html">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="price.html">Pricing</a>
+        </li>
+        <li class="nav-item4">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+
+      <div class="d-flex ms-lg-3">
+        <a href="login.html" class="btn btn-outline-primary me-2">Login</a>
+        <a href="register.html" class="btn btn-primary">Register</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- 
+    Hero 
+<section class="contact-hero text-center">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>Let's talk about your dream home</p>
+  </div>
+</section>
+
+<!-- Contact 
+<section class="container py-5" style="text-align: center;">
+  <div class="row g-4">
+
+    <div class="col-md-6">
+      <form class="contact-form p-4">
+        <input type="text" class="form-control mb-3" placeholder="Your Name">
+        <input type="email" class="form-control mb-3" placeholder="Email">
+        <textarea class="form-control mb-3" rows="4" placeholder="Message"></textarea>
+        <button class="btn btn-primary w-100">Send Message</button>
+      </form>
+    </div>
+
+    <div class="col-md-6">
+      <div class="contact-info p-4">
+        <h5>Reach Us</h5>
+        <p>Email: support@virtualhomebuilder.com</p>
+        <p>Phone: +91 73393 71568</p>
+        <p>Location: India</p>
+      </div>
+  </div>
+
+  </div>
+</section> -->
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+
+      <h2 class="text-center mb-4">Contact Us</h2>
+
+      <form id="contactForm">
+        <input type="text" class="form-control mb-3" placeholder="Your Name" required>
+        <input type="email" class="form-control mb-3" placeholder="Your Email" required>
+        <input type="text" class="form-control mb-3" placeholder="Subject" required>
+        <textarea class="form-control mb-3" rows="4" placeholder="Message" required></textarea>
+
+        <button type="submit" class="btn btn-primary w-100">Submit</button>
+      </form>
+
+      <p id="statusMsg" class="text-center mt-3"></p>
+
+    </div>
+  </div>
+</div>
+
+<script src="js/contact.js"></script>
+
+<script src="assests/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
