@@ -42,8 +42,36 @@
         <h6>2D Layout Builder</h6>
         <p>Draw rooms and adjust structure</p>
       </div>
+      <div class="btn-toolbar mb-3">
+        <button class="btn btn-outline-primary me-2" onclick="addRoomType('Bedroom')">Bedroom</button>
+        <button class="btn btn-outline-success me-2" onclick="addRoomType('Kitchen')">Kitchen</button>
+        <button class="btn btn-outline-warning me-2" onclick="addRoomType('Living Room')">Living</button>
+      </div><!--
+      <div class="btn-toolbar mb-3">
+        <button class="btn btn-primary me-2" onclick="enableInteriorMode()">Interior Design</button>
+        <button class="btn btn-outline-secondary me-2" onclick="addFurniture('bed')">Bed</button>
+        <button class="btn btn-outline-secondary me-2" onclick="addFurniture('sofa')">Sofa</button>
+        <button class="btn btn-outline-secondary me-2" onclick="addFurniture('table')">Table</button>
+      </div> -->
+      <div class="d-flex gap-3 align-items-center mb-3">
+  <!-- Mode Selector -->
+  <select class="form-select w-auto" onchange="handleModeChange(this.value)">
+    <option value="structure">Structure Design</option>
+    <option value="interior">Interior Design</option>
+  </select>
 
-      <div class="canvas-wrapper">
+  <!-- Furniture Selector -->
+  <select id="furnitureSelect"
+          class="form-select w-auto d-none"
+          onchange="addFurniture(this.value)">
+    <option value="">Add Furniture</option>
+    <option value="bed">Bed</option>
+    <option value="sofa">Sofa</option>
+    <option value="table">Table</option>
+  </select>
+
+</div>
+    <div class="canvas-wrapper">
         <!-- Fabric.js canvas will go here -->
         <canvas id="floorCanvas"></canvas>
       </div>
@@ -65,6 +93,10 @@
     </div>
   </div>
 </div>
+  <div class="preview-box">
+    <canvas id="threeCanvas"></canvas>
+  </div>
+
 
     <!-- Fabric.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script>
@@ -73,6 +105,10 @@
     <script src="../js/structure-2d.js"></script>
     <!-- js -->   
     <script src="../assests/js/bootstrap.bundle.min.js"></script>
+    <!-- Three.js -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+    <!-- 3D logic -->
+    <script src="../js/structure-3d.js"></script>
 
 </body>
 </html>

@@ -77,3 +77,18 @@ body {
   color: #9aa4b2;
   font-size: 14px;
 }
+
+
+/* 3d view */
+.preview-box {
+  width: 100%;
+  height: 100%;
+  background: #f8fafc;
+  border-radius: 12px;
+}
+
+#threeCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}

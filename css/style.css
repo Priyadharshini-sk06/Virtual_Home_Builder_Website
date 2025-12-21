@@ -1,7 +1,7 @@
 /* Remove default spacing */
 * {
-    margin: 1px 2px;
-    padding: 1px;
+    margin: 0px 2px;
+    padding: 0px;
     box-sizing: border-box;
 }
 
@@ -51,8 +51,11 @@
     }
 }*/
 
-
-
+.site-footer1 {
+    background-color: rgb(7, 7, 83);
+    text-align: center;
+    color: white;
+}
 /* menu */
 
 .construct {
@@ -269,7 +272,7 @@
 
 
 /* footer */
-.footer {
+/* .footer {
     background-color: rgb(7, 7, 83);
     color: #fff;
     padding: 40px 30px 20px;
@@ -290,7 +293,7 @@
 
 .link > div {
     flex: 1;
-}
+} */
 
 /* Mobile: stack items */
 @media (max-width: 767px) {

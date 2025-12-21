@@ -87,10 +87,13 @@
         </div>
 
         <!-- BUTTON -->
-        <div class="d-grid">
+        <!-- <div class="d-grid">
           <button id="continueBtn" class="btn btn-primary btn-lg">
             <a href="../html/structure.html">Continue to Builder →</a>
           </button>
+        </div> -->
+        <div class="d-grid">
+          <button id="continueBtn" class="btn btn-primary btn-lg">Continue to Builder →</button>
         </div>
 
         <div class="text-center mt-3 text-muted small">
@@ -102,12 +105,11 @@
     </div>
   </div>
 </div>
-
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
  <!-- js -->   
     <script src="../assests/js/bootstrap.bundle.min.js"></script>
-
+    
 <script>
   document.getElementById("continueBtn").addEventListener("click", function () {
     const sqft = document.getElementById("sqft").value;
@@ -118,12 +120,12 @@
       return;
     }
 
-    // Store for editor usage
-    sessionStorage.setItem("sqFeet", sqft);
-    sessionStorage.setItem("country", country);
+    // ✅ STORE CORRECTLY
+    localStorage.setItem("selectedSqft", sqft);
+    localStorage.setItem("selectedCountry", country);
 
-    // Redirect to editor
-    window.location.href = "../html/editor.html";
+    // ✅ REDIRECT
+    window.location.href = "../html/structure.html";
   });
 </script>
 
