@@ -43,6 +43,7 @@ function animate() {
 animate();
 
 function syncRoomsFrom2D(rooms) {
+
   rooms.forEach(room => {
     let mesh = roomMeshes.get(room.id);
 
@@ -63,11 +64,18 @@ function syncRoomsFrom2D(rooms) {
       roomMeshes.set(room.id, mesh);
     }
 
+    // mesh.position.set(
+    //   room.left - 400,
+    //   50,
+    //   room.top - 300
+    // );
+    
     // Update position
     mesh.position.set(
-      room.left - 400,
+      room.left - canvas.width / 2,
       50,
-      room.top - 300
+      room.top - canvas.height / 2
     );
   });
+  console.log("Syncing rooms:", rooms);
 }

@@ -101,10 +101,13 @@ function addRoomType(type) {
     }
   });
 
+  
   canvas.add(group);
   canvas.setActiveObject(group);
-}
+  canvas.requestRenderAll();
+  exportRoomsFor3D(); // ✅ SYNC TO 3D
 
+}
 // fallback Add Room button
 function addRoom() {
   addRoomType("Bedroom");
@@ -240,10 +243,10 @@ function exportRoomsFor3D() {
   }
 }
 
-canvas.on("object:modified", () => {
+canvas.on("object:added", () => {
   exportRoomsFor3D();
 });
 
-canvas.add(group);
-canvas.setActiveObject(group);
-exportRoomsFor3D();
+canvas.on("object:modified", () => {
+  exportRoomsFor3D();
+});
